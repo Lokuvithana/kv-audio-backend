@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const userSchema = mongoose.Schema({
 
-    //email eka thiyena oni attributes json ekak widhata liyagana puluwan
+    
     email : {
         type : String,
         required : true,
@@ -17,7 +17,7 @@ const userSchema = mongoose.Schema({
     role : {
         type : String,
         required : true,
-        default : "customer",//role eka wenama dunne naththam me widhta default ganna value ekak set karanmna  pulwuan    
+        default : "customer",    
     },
 
     firstName : {
