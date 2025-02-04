@@ -49,7 +49,7 @@ export function getReview(req,res){
 
 export function deleteReview(req,res){
 
-    const email = req.params.email; //request eke parameter ekaka enawanm eka allaganwa
+    const email = req.params.email; 
 
     if (req.user == null){
         res.status(401).json({
@@ -105,10 +105,10 @@ export function approvedReview(req,res){
     if(req.user.role == "admin"){
         Review.updateOne({
 
-            email : email //methana mulin email eka araganwa
+            email : email 
         },
         {
-            isApproved : true //itapsse eka approved karanwa JSON dekak wena wenama liyanwa ekata
+            isApproved : true 
 
         }).then(()=>{
             res.json({
