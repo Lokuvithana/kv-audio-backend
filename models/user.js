@@ -38,7 +38,16 @@ const userSchema = mongoose.Schema({
     phone : {
         type : String,
         required : true,
+    },
+
+    profilePicture : {
+        type : String,
+        required : true,
+        default : "http://abc.comhttps://cdn.vectorstock.com/i/1000v/92/16/default-profile-picture-avatar-user-icon-vector-46389216.jpg"
+        //this get default image until user updated his prfilr picutre
     }
+
+
 
 });
 
