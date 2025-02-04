@@ -33,6 +33,8 @@ export function getReview(req,res){
     const user = req.user;
 
     if(user == null || user.role != "admin"){
+
+        //methana me thiyenne Promise ekek api danne nathi unata Review.find({isApproved : true}) meka thamai promise eka man me kattiyawa find karala db eken aran dennam eka hari giyoth resolve eke output eka then eke review walata gannawa itapas eka print karanwa json eke waradunoth reject eke output eka .catch()eka athulata dala error eka ganna puluwan response ekata......    oka thamai mechchara kal api use kare danne nathi unata ewa serama mongoose eken manage karala denawa (apita oni nam promise ekak hadala use karanath puluwan)
         Review.find({isApproved : true}).then((review)=>{
             res.json(review);
         })
