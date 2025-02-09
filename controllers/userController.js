@@ -57,7 +57,7 @@ export function loginUser(req,res){
                     
                 },process.env.JWT_SECRET)
                 res.json({
-                    message : "Login successful" , token : token , role : user.user
+                    message : "Login successful" , token : token , user : user
                 })
             }
             else{
